@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  typescript-prisma-example:
+    build: .
+    image: typescript-prisma-example
+    container_name: typescript-prisma-example
+    ports:
+      - "${PORT}:4000"
+    environment:
+      - "PORT=${PORT}"
+      - "MONGODB_DATABASE_URL=${MONGODB_DATABASE_URL}"
